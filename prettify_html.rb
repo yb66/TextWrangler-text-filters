@@ -5,6 +5,7 @@ original = ARGF.readlines.join
 
 require 'nokogiri'
 
+# see http://stackoverflow.com/a/32291792/335847
 Nokogiri::XML::Node.class_eval do
   # Print every Node by default (will be overridden by CharacterData)
   define_method :should_print? do
