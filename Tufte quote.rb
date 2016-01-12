@@ -7,7 +7,19 @@ require 'time'
 lines = ARGF.readlines
 
 quote_lines,rest = lines.partition{|line| line.start_with?( ">" ) }
-href,rest = rest.partition{|line| line.ascii_only? && URI.regexp =~ line }
+href,rest =
+  rest.partition{|line|
+    if line.ascii_only? && URI.regexp =~ line
+      begin
+        URI(line) # if it's a valid URI
+        true      # it will reach here
+      rescue URI::InvalidURIError => e
+        false # if not, return false
+      end
+    else
+      false
+    end
+  }
 footer,cite,date = *rest
 
 href = href.empty? ?
@@ -26,7 +38,12 @@ if (date.nil? || date.empty?) &! cite.nil?
   end
 end
 
-quote_lines.map!{|line| line.sub /^\>\s*/, "" }
+# To make sure
+cite.force_encoding("ASCII-8BIT") unless cite.nil?
+footer.force_encoding("ASCII-8BIT") unless footer.nil?
+
+quote_lines.map!{|line| line.force_encoding("ASCII-8BIT") }
+           .map!{|line| line.sub /^\>\s*/, "" }
 quote = 
   quote_lines.inject([[]]){|mem,line|
                               if line !~ /^\s*$/
