@@ -7,3 +7,5 @@ See http://iainbarnett.me.uk/articles/tufte-block-quote/ for more on `Tufte quot
 See http://iainbarnett.me.uk/articles/prettify-html-in-textwrangler/ for more on `prettify_html.rb`.
 
 See http://iainbarnett.me.uk/articles/italicise-markdown-in-textwrangler/ for more on italicising markdown with `md give emphasis.rb`.
+
+See http://iainbarnett.me.uk/articles/wrapping-text-in-quotes-with-textwrangler/ for more on italicising markdown with `md wrap ".rb`.
