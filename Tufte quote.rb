@@ -45,17 +45,9 @@ footer.force_encoding("ASCII-8BIT") unless footer.nil?
 quote_lines.map!{|line| line.force_encoding("ASCII-8BIT") }
            .map!{|line| line.sub /^\>\s*/, "" }
 quote = 
-  quote_lines.inject([[]]){|mem,line|
-                              if line !~ /^\s*$/
-                                mem.last.push(line)
-                                mem
-                              else
-                                mem.push([])
-                              end
-                          }.reject{|para| para.empty? }
-                          .map{|para| para.join(" ").gsub(/\s+/, " ") }
-                          .map{|para| "<p>#{para}</p>" }
-                          .join
+  quote_lines.map{|para| para.gsub(/\s+/, " ") }
+              .map{|para| "<p>#{para}</p>" }
+              .join
 
 if cite || href
   cite = %Q!<cite>#{cite}</cite>!.gsub(%Q!\n!,'') unless cite.nil? || cite.empty?
