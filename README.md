@@ -9,3 +9,5 @@ See http://iainbarnett.me.uk/articles/prettify-html-in-textwrangler/ for more on
 See http://iainbarnett.me.uk/articles/italicise-markdown-in-textwrangler/ for more on italicising markdown with `md give emphasis.rb`.
 
 See http://iainbarnett.me.uk/articles/wrapping-text-in-quotes-with-textwrangler/ for more on italicising markdown with `md wrap ".rb`.
+
+See http://iainbarnett.me.uk/articles/tufte-epigraphs-with-textwrangler/ for more on wrapping a Tufte blockquote with an epigraph using `Tufte epigraph.rb`.
