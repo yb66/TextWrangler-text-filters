@@ -2,6 +2,10 @@
 
 Just drop any of these in `~/Library/Application Support/TextWrangler/Text Filters` to use. I'm running a version of Ruby higher than the OS X system one, so try to update to something recent (2.2 or more).
 
+## Note ##
+
+These should all work with BBEdit (I'm using them with that nowadays). Just replace "TextWrangler" with BBEdit to find the right place to install them. I've aalso started cloning this repo straight into the Text Filters folder with `git clone https://github.com/yb66/TextWrangler-text-filters.git "~/Library/Application/Support/BBEdit/Text Filters"` to save myself time, and the trouble of losing any the next time my laptop dies (grrrr!)
+
 See http://iainbarnett.me.uk/articles/tufte-block-quote/ for more on `Tufte quoting.rb`.
 
 See http://iainbarnett.me.uk/articles/prettify-html-in-textwrangler/ for more on `prettify_html.rb`.
