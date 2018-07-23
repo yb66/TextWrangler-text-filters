@@ -1,3 +1,5 @@
+This has moved to [BBEdit stuff](https://github.com/yb66/BBEdit-stuff), mainly because I wanted to keep more than just text filters. Stuff may be in 2 locations for a while as I want to review any scripts that make it to the new repo.
+
 # TextWrangler text filters #
 
 Just drop any of these in `~/Library/Application Support/TextWrangler/Text Filters` to use. I'm running a version of Ruby higher than the OS X system one, so try to update to something recent (2.2 or more).
